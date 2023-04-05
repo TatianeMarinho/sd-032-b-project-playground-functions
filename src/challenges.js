@@ -15,6 +15,12 @@ function splitSentence(phrase) {
 
 // Desafio 3 - Crie a função concatName
 
+function concatName(names) {
+  let last = names.length - 1;
+  let firstLast = `${names[last]}, ${names[0]}`;
+  return firstLast;
+}
+
 // Desafio 4 - Crie a função footballPoints
 
 // Desafio 5 - Crie a função highestCount
