@@ -1,7 +1,12 @@
 // Desafio 1 - Crie a função compareTrue
-function name(params) {
-  
-}
+function compareTrue(param1, param2) {
+  if (param1 === true && param2 === true) {
+    return true;
+  }
+    return false;
+  ;
+};
+
 
 // Desafio 2 - Crie a função splitSentence
 
