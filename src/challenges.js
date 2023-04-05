@@ -3,12 +3,15 @@ function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
   }
-    return false;
-  ;
-};
-
+  return false;
+}
 
 // Desafio 2 - Crie a função splitSentence
+
+function splitSentence(phrase) {
+  let separated = phrase.split(' ');
+  return separated;
+}
 
 // Desafio 3 - Crie a função concatName
 
