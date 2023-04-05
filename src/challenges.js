@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 // Desafio 1 - Crie a função compareTrue
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
@@ -68,6 +69,19 @@ function calcAllAreas(base, height, form) {
 }
 
 // Desafio 7 - Crie a função catAndMouse
+
+function catAndMouse(mouse, cat1, cat2) {
+  mouse = null;
+  if (cat2 < cat1) {
+    return 'cat2';
+  } if (cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  } else {
+    return 'cat1';
+  }
+}
+
+console.log(catAndMouse(3, 2));
 
 // Desafio 8 - Crie a função fizzBuzz
 
