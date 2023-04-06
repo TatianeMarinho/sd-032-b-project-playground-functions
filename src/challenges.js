@@ -1,3 +1,4 @@
+/* eslint-disable guard-for-in */
 /* eslint-disable eqeqeq */
 /* eslint-disable complexity */
 /* eslint-disable no-else-return */
@@ -35,15 +36,10 @@ const footballPoints = (wins, ties) => {
 // Desafio 5 - Crie a função highestCount
 
 const highestCount = (numbers) => {
-  let highNumber = numbers[0];
-  let repetition = 1;
-  for (const index in numbers) {
-    if (highNumber < numbers[index]) {
-      highNumber = numbers[index];
-    }
-  }
-  for (const rep of numbers) {
-    if (rep == highNumber) {
+  let highNumber = Math.max(...numbers);
+  let repetition = 0;
+  for (const rep in numbers) {
+    if (numbers[rep] == highNumber) {
       repetition += 1;
     }
   }
@@ -74,10 +70,12 @@ const calcAllAreas = (base, height, form) => {
 // Desafio 7 - Crie a função catAndMouse
 
 const catAndMouse = (mouse, cat1, cat2) => {
-  mouse = null;
-  if (cat2 < cat1) {
+  let cat1Mouse = Math.abs(cat1 - mouse);
+  let cat2Mouse = Math.abs(cat2 - mouse);
+
+  if (cat2Mouse < cat1Mouse) {
     return 'cat2';
-  } if (cat1 === cat2) {
+  } if (cat1Mouse == cat2Mouse) {
     return 'os gatos trombam e o rato foge';
   } else {
     return 'cat1';
@@ -146,6 +144,19 @@ const decode = (string) => {
 
 // Desafio 10 - Crie a função techList
 
+const techList = (tech, name) => {
+  let tec = {};
+  if (!tech || !name) {
+    return [];
+  } else {
+    let technology = tech.sort();
+
+    for (const value of technology) {
+      tec.push({ tech: value, nome: name });
+    }
+  }
+  return tec;
+};
 
 
 // Não modifique essas linhas
