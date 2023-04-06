@@ -150,11 +150,8 @@ const techList = (tech, name) => {
     return [];
   } else {
     let technology = tech.sort();
-
-    for (const value of technology) {
       tec.push({ tech: value, nome: name });
     }
-  }
   return tec;
 };
 
