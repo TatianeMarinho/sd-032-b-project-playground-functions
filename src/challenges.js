@@ -104,6 +104,24 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9 - Crie a função encode e a função decode
 
+function encode(string) {
+  let newString = [];
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] == 'a') {
+      newString.push('1');
+    } else if (string[index] == 'e') {
+      newString.push('2');
+    } else if (string[index] == 'i') {
+      newString.push('3');
+    } else if (string[index] == 'o') {
+      newString.push('4');
+    } else {
+      newString.push(string[index]);
+    }
+  }
+  return newString.join('');
+}
+
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
