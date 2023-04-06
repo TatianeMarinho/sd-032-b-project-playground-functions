@@ -115,6 +115,28 @@ function encode(string) {
       newString.push('3');
     } else if (string[index] == 'o') {
       newString.push('4');
+    } else if (string[index] == 'u') {
+      newString.push('5');
+    }else {
+      newString.push(string[index]);
+    }
+  }
+  return newString.join('');
+}
+
+function decode(string) {
+  let newString = [];
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] == '1') {
+      newString.push('a');
+    } else if (string[index] == '2') {
+      newString.push('e');
+    } else if (string[index] == '3') {
+      newString.push('i');
+    } else if (string[index] == '4') {
+      newString.push('o');
+    } else if (string[index] == '5') {
+      newString.push('u');
     } else {
       newString.push(string[index]);
     }
@@ -123,6 +145,8 @@ function encode(string) {
 }
 
 // Desafio 10 - Crie a função techList
+
+func
 
 // Não modifique essas linhas
 module.exports = {
