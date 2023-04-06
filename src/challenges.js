@@ -2,77 +2,78 @@
 /* eslint-disable complexity */
 /* eslint-disable no-else-return */
 // Desafio 1 - Crie a função compareTrue
-function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
-    return true;
-  }
-  return false;
-}
+
+const compareTrue = (param1, param2) => {
+  const check = (param1 === true && param2 === true) ? true : false;
+  return check;
+};
 
 // Desafio 2 - Crie a função splitSentence
 
-function splitSentence(phrase) {
+const splitSentence = (phrase) => {
   let separated = phrase.split(' ');
   return separated;
-}
+};
 
 // Desafio 3 - Crie a função concatName
 
-function concatName(names) {
+const concatName = (names) => {
   let last = names.length - 1;
   let firstLast = `${names[last]}, ${names[0]}`;
   return firstLast;
-}
+};
 
 // Desafio 4 - Crie a função footballPoints
 
-function footballPoints(wins, ties) {
-  let totalPoints = (wins * 3) + (ties * 1);
+const footballPoints = (wins, ties) => {
+  let tiess = ties * 1;
+  let winss = wins * 3;
+  let totalPoints = winss + tiess * 1;
   return totalPoints;
-}
+};
 
 // Desafio 5 - Crie a função highestCount
 
-function highestCount(numbers) {
+const highestCount = (numbers) => {
   let highNumber = numbers[0];
   let repetition = 1;
-  for (let index = 1; index < numbers.length; index += 1) {
-    if (highNumber.length < numbers[index].length) {
+  for (const index in numbers) {
+    if (highNumber < numbers[index]) {
       highNumber = numbers[index];
     }
   }
-  for (let mIndex = 0; mIndex < numbers.length; mIndex += 1) {
-    if (mIndex = highNumber) {
+  for (const rep of numbers) {
+    if (rep == highNumber) {
       repetition += 1;
     }
-}
+  }
   return repetition;
-}
+};
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
-function calcTriangleArea(base, height) {
+const calcTriangleArea = (base, height) => {
   let triangle = (base * height) / 2;
   return triangle;
-}
+};
 
-function calcRectangleArea(base, height) {
+const calcRectangleArea = (base, height) => {
   let rectangle = (base * height);
   return rectangle;
-}
+};
 
-function calcAllAreas(base, height, form) {
+const calcAllAreas = (base, height, form) => {
   if (form === 'triângulo') {
     return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
   } if (form === 'retângulo') {
     return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
   }
   return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
-}
+};
 
 // Desafio 7 - Crie a função catAndMouse
 
-function catAndMouse(mouse, cat1, cat2) {
+const catAndMouse = (mouse, cat1, cat2) => {
   mouse = null;
   if (cat2 < cat1) {
     return 'cat2';
@@ -81,13 +82,13 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return 'cat1';
   }
-}
+};
 
 // Desafio 8 - Crie a função fizzBuzz
 
-function fizzBuzz(num) {
+const fizzBuzz = (num) => {
   let result = [];
-  for (let index = 0; index < num.length; index += 1) {
+  for (const index in num) {
     if (num[index] % 3 == 0 && num[index] % 5 != 0) {
       result.push('fizz');
     } else if (num[index] % 5 == 0 && num[index] % 3 != 0) {
@@ -99,14 +100,13 @@ function fizzBuzz(num) {
     }
   }
   return result;
-}
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+};
 
-// Desafio 9 - Crie a função encode e a função decode
+// Desafio 9 - Crie a função encode a função decode
 
-function encode(string) {
+const encode = (string) => {
   let newString = [];
-  for (let index = 0; index < string.length; index += 1) {
+  for (const index in string) {
     if (string[index] == 'a') {
       newString.push('1');
     } else if (string[index] == 'e') {
@@ -122,11 +122,11 @@ function encode(string) {
     }
   }
   return newString.join('');
-}
+};
 
-function decode(string) {
+const decode = (string) => {
   let newString = [];
-  for (let index = 0; index < string.length; index += 1) {
+  for (const index in string) {
     if (string[index] == '1') {
       newString.push('a');
     } else if (string[index] == '2') {
@@ -142,11 +142,11 @@ function decode(string) {
     }
   }
   return newString.join('');
-}
+};
 
 // Desafio 10 - Crie a função techList
 
-func
+
 
 // Não modifique essas linhas
 module.exports = {
