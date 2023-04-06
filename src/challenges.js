@@ -1,3 +1,5 @@
+/* eslint-disable eqeqeq */
+/* eslint-disable complexity */
 /* eslint-disable no-else-return */
 // Desafio 1 - Crie a função compareTrue
 function compareTrue(param1, param2) {
@@ -81,9 +83,24 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(3, 2));
-
 // Desafio 8 - Crie a função fizzBuzz
+
+function fizzBuzz(num) {
+  let result = [];
+  for (let index = 0; index < num.length; index += 1) {
+    if (num[index] % 3 == 0 && num[index] % 5 != 0) {
+      result.push('fizz');
+    } else if (num[index] % 5 == 0 && num[index] % 3 != 0) {
+      result.push('buzz');
+    } else if (num[index] % 3 == 0 && num[index] % 5 == 0) {
+      result.push('fizzBuzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
+}
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9 - Crie a função encode e a função decode
 
