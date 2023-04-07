@@ -33,6 +33,24 @@ const generatePhoneNumber = (number1) => {
 };
 
 // Desafio 12 -  Crie a função triangleCheck
+const checkUm = (lineA, lineB, lineC) => {
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
+    return true;
+  }
+};
+
+const checkDois = (lineA, lineB, lineC) => {
+  if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineB + lineA)) {
+    return true;
+  }
+};
+
+const triangleCheck = (lineA, lineB, lineC) => {
+  if (checkUm(lineA, lineB, lineC) === true && checkDois(lineA, lineB, lineC) === true) {
+    return true;
+  }
+  return false;
+};
 
 // Desafio 13 - Crie a função hydrate
 
