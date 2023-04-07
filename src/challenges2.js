@@ -23,15 +23,14 @@ const testTree = (number) => {
 };
 
 const generatePhoneNumber = (number1) => {
-  if (testZero(number1) === true || testNine(number1) === true || testTree(number1) === 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  } if (number1.length !== 10) {
+  let stringNum = number1.join('');
+  if (number1.length !== 11) {
     return 'Array com tamanho incorreto.';
+  } if (testZero(number1) === true || testNine(number1) === true || testTree(number1) === 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  return number1.join();
+  return `(${stringNum.slice(0, 2)}) ${stringNum.slice(2, 7)}-${stringNum.slice(7, )}`;
 };
-
-console.log(generatePhoneNumber([8, 9, 7, 8, 6, 7, 1, 2, 3, 1]));
 
 // Desafio 12 -  Crie a função triangleCheck
 
