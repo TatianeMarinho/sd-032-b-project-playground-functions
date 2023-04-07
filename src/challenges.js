@@ -5,7 +5,7 @@
 // Desafio 1 - Crie a função compareTrue
 
 const compareTrue = (param1, param2) => {
-  const check = (param1 === true && param2 === true) ? true : false;
+  const check = (param1 === true && param2 === true);
   return check;
 };
 
@@ -39,7 +39,7 @@ const highestCount = (numbers) => {
   let highNumber = Math.max(...numbers);
   let repetition = 0;
   for (const rep in numbers) {
-    if (numbers[rep] == highNumber) {
+    if (numbers[rep] === highNumber) {
       repetition += 1;
     }
   }
@@ -75,11 +75,9 @@ const catAndMouse = (mouse, cat1, cat2) => {
 
   if (cat2Mouse < cat1Mouse) {
     return 'cat2';
-  } if (cat1Mouse == cat2Mouse) {
+  } if (cat1Mouse === cat2Mouse) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return 'cat1';
-  }
+  } return 'cat1';
 };
 
 // Desafio 8 - Crie a função fizzBuzz
@@ -89,9 +87,9 @@ const fizzBuzz = (num) => {
   for (const index in num) {
     if (num[index] % 3 == 0 && num[index] % 5 != 0) {
       result.push('fizz');
-    } else if (num[index] % 5 == 0 && num[index] % 3 != 0) {
+    } else if (num[index] % 5 === 0 && num[index] % 3 !== 0) {
       result.push('buzz');
-    } else if (num[index] % 3 == 0 && num[index] % 5 == 0) {
+    } else if (num[index] % 3 === 0 && num[index] % 5 === 0) {
       result.push('fizzBuzz');
     } else {
       result.push('bug!');
@@ -107,15 +105,15 @@ const encode = (string) => {
   for (const index in string) {
     if (string[index] == 'a') {
       newString.push('1');
-    } else if (string[index] == 'e') {
+    } else if (string[index] === 'e') {
       newString.push('2');
-    } else if (string[index] == 'i') {
+    } else if (string[index] === 'i') {
       newString.push('3');
-    } else if (string[index] == 'o') {
+    } else if (string[index] === 'o') {
       newString.push('4');
-    } else if (string[index] == 'u') {
+    } else if (string[index] === 'u') {
       newString.push('5');
-    }else {
+    } else {
       newString.push(string[index]);
     }
   }
@@ -125,15 +123,15 @@ const encode = (string) => {
 const decode = (string) => {
   let newString = [];
   for (const index in string) {
-    if (string[index] == '1') {
+    if (string[index] === '1') {
       newString.push('a');
-    } else if (string[index] == '2') {
+    } else if (string[index] === '2') {
       newString.push('e');
-    } else if (string[index] == '3') {
+    } else if (string[index] === '3') {
       newString.push('i');
-    } else if (string[index] == '4') {
+    } else if (string[index] === '4') {
       newString.push('o');
-    } else if (string[index] == '5') {
+    } else if (string[index] === '5') {
       newString.push('u');
     } else {
       newString.push(string[index]);
@@ -144,17 +142,18 @@ const decode = (string) => {
 
 // Desafio 10 - Crie a função techList
 
-const techList = (tech, name) => {
-  let tec = {};
-  if (!tech || !name) {
-    return [];
-  } else {
-    let technology = tech.sort();
-      tec.push({ tech: value, nome: name });
-    }
-  return tec;
-};
+const techList = (listTech, names) => {
+  let technologies = listTech.sort();
+  let resultList = [];
 
+  for (const key in technologies) {
+    if (technologies.length === 0) {
+      return resultList;
+    }
+    resultList.push({ tech: technologies[key], name: names });
+  }
+  return resultList;
+};
 
 // Não modifique essas linhas
 module.exports = {
