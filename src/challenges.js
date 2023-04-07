@@ -85,7 +85,7 @@ const catAndMouse = (mouse, cat1, cat2) => {
 const fizzBuzz = (num) => {
   let result = [];
   for (const index in num) {
-    if (num[index] % 3 == 0 && num[index] % 5 != 0) {
+    if (num[index] % 3 === 0 && num[index] % 5 !== 0) {
       result.push('fizz');
     } else if (num[index] % 5 === 0 && num[index] % 3 !== 0) {
       result.push('buzz');
@@ -103,7 +103,7 @@ const fizzBuzz = (num) => {
 const encode = (string) => {
   let newString = [];
   for (const index in string) {
-    if (string[index] == 'a') {
+    if (string[index] === 'a') {
       newString.push('1');
     } else if (string[index] === 'e') {
       newString.push('2');

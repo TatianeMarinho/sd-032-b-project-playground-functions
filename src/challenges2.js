@@ -9,7 +9,7 @@ const testTree = (number) => {
   let score = 0;
 
   for (const element of num) {
-    if (element != value) {
+    if (element !== value) {
       value = element;
       score = 1;
     } else {
@@ -62,9 +62,8 @@ const hydrate = (string) => {
   }
   if (sum === 1) {
     return `${sum} copo de água`;
-  } 
-    return `${sum} copos de água`;
-    
+  }
+  return `${sum} copos de água`;
 };
 
 /* eslint no-undef: 0 */
